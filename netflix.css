@@ -153,8 +153,8 @@ nav button {
 
 .secImg video {
     position: absolute;
-    top: 101px;
-    right: 109px;
+    top: 89px;
+    right: 66px;
     width: 420px;
     height: 302px;
 }
@@ -245,7 +245,7 @@ footer .questions {
 
     .secImg video {
         width: 224px;
-        transform: translateY(-85px) translateX(21px);
+        transform: translateY(-98px) translateX(21px);
     }
 
     .hero> :nth-child(1) {
