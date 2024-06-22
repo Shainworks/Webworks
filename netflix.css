@@ -244,8 +244,8 @@ footer .questions {
     }
 
     .secImg video {
-        width: 195px;
-        transform: translateY(-83px) translateX(-4px);
+        width: 224px;
+        transform: translateY(-85px) translateX(21px);
     }
 
     .hero> :nth-child(1) {
