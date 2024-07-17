@@ -1,4 +1,4 @@
-## Variables in JS
+## Variables,Data types and Objects in JS
 ```js
 console.log("Hey this is the first script")
 let a = 5;
