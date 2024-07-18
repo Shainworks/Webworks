@@ -223,4 +223,62 @@ let obj1 ={             //prints the marks of a student
  }
 
  ```
- 
+ ## Functions in JS and practice questions (solved)
+ ```js
+ console.log("Hey darshan here,here is smthg about the functions ")
+
+
+console.log("Hey this is darshan over here")
+console.log("Hey this is darshan over the hill")
+console.log("Hey this is darshan over the mountains")
+console.log("Hey this is darshan over the clouds")
+console.log("Hey this is darshan over plane")
+
+//The block of statments print what we have typed but to change the name in a large scale we use functions...for example
+
+function cool(name) {           //function is basiclly used for rusability...this alone word reuability tells alot things
+console.log("Hey this is " + name + " over here")
+console.log("Hey this is " + name + " over the hill")
+console.log("Hey this is " + name + " over the mountains")
+console.log("Hey this is " + name + " over the clouds")
+console.log("Hey this is " + name + " over plane")
+}
+
+cool("Shain")           //this is function invocation a way to use the code inside a function
+cool("Legend")
+
+function sum(a,b) {
+    console.log(a+b)
+}
+sum(10,10)
+sum(15,10)
+function sum1(a,b,c=3) {
+    console.log(a,b,c)
+    return a+b+c ;
+   
+}
+result1 = sum1(1)       //this will return nan(not a number) happens when a number is added to undefined
+result2 = sum1(1,16)
+result3 = sum1(1,14,1)
+
+console.log("The sum of the above number is ",result1)
+console.log("The sum of the above number is ",result3)
+console.log("The sum of the above number is ",result2)
+
+const func1 = (x) =>{       //this is an arrow function basically used to decalre a function as an variable and use this function variable in the other function (It is a bit complex)
+    console.log("I am an arrow fnction",x)
+}
+
+func1(23);
+func1(45);
+func1(67);
+
+
+function findmean(num1,num2,num3,num4,num5) {       //this is used to find mean of 5 numbers using functions
+    const sum =num1+num2+num3+num4+num5;
+    const mean = sum/5;
+    return mean;
+}
+mean= findmean(12,23,34,66,76)
+console.log("The mean of the 5 numbers is ",mean)
+```
