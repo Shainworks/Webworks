@@ -282,3 +282,52 @@ function findmean(num1,num2,num3,num4,num5) {       //this is used to find mean 
 mean= findmean(12,23,34,66,76)
 console.log("The mean of the 5 numbers is ",mean)
 ```
+## Strings in JS and Practice questions (solved)
+```js
+console.log("Here i will be learning about strings")
+let a = "Darshansh";
+let name = "Darshan"
+let friend = "Null"
+console.log(a[0]);
+console.log(a[1]);
+console.log(a[2]);
+console.log(a[3]);
+console.log(a[5]);
+console.log(a[6]);
+// console.log(a[7]);       //if this is executed then it will show as undefined cuz there is no 7th letter
+
+console.log(a.length)       //gives the number of characters (property)
+console.log(a.toUpperCase())        //converts every character to uppercase(function) 
+console.log(a.toLowerCase())         //converts every character to lowercase(function) 
+console.log(a.slice(2,5))       //prints letters from 2 to 5 (5 not included)
+console.log(a.slice(1))         //prints letter from 1 (1 is not included)
+console.log(a.replace("sh","77"))       //Replaces the mentioned letters ....if the letters are repeated it only replace the first matched words in the row
+console.log(a.concat( name," is a legend"))         //concatenates two mentioned strings and even adds extra words by adding a comma and mentioning in double quotes
+
+let b = "Darshan"
+console.log(b.trim())       //removes whitespaces
+
+console.log(b.indexOf("sh"))        //gives the index val;ue of an character
+console.log(b.startsWith("Da"))     //checks whether the character is staring from a particular sequence(returns true) 
+console.log(b.endsWith("an"))     //checks whether the character is ending from a particular sequence(returns true)
+
+//strings are immutable (They cannot be changed) they can only be altered in certain places
+
+console.log("My name is "+name+" and my friend name is "+friend)    //this is a lengthy process let make it easier by using template lieterls in the next line where we can insert the variables directly in a string using back ticks(This is called string interpolation)
+
+console.log(`My name is ${name} and my friend name is ${friend}`)
+
+console.log(`Hello 'single quote' "double quote"`)      //template literals are also used to insert double and single quote ina string
+
+console.log("Name \"is\" ")     //another way is to use escape sequence character where we can use \ as an prefix to singlr or double quotes     \n-->gives a new line
+                 //\t-->gives a tab space
+                 //\r-->carriage return even i too don't know what it is
+
+
+
+console.log("har\"".length)         //it will print 4
+
+
+let amount = "Please give me Rs1000"
+console.log(amount.slice(17))       //extracing the amount from the string
+```
