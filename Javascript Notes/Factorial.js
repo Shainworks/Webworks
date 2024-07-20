@@ -10,7 +10,7 @@ function factorial(number) {        //This is finding factorial using the reduce
 
 console.log(factorial(a))
 
-function facfor(number) {
+function facfor(number) {           //this is finding factorial using the for loop method
     let fac = 1
     for (let index = 1; index <= number; index++) {
         const element = number;
