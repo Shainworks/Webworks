@@ -331,3 +331,143 @@ console.log("har\"".length)         //it will print 4
 let amount = "Please give me Rs1000"
 console.log(amount.slice(17))       //extracing the amount from the string
 ```
+## Arrays in JS and Loops in arrays and also practice questions(solved)
+```js
+console.log("Today i'm gonna learn about Arrays")
+//Arrays can basically hold more than one value and hence having collection of different Data types
+let arr = [1,2,3,4,5,6]
+// Index   0,1,2,3,4,5
+arr[0] = 22      //Arrays are mutable(Original string can be changed) same thing cannot be done with strings cuz they are immutable
+console.log(arr, typeof arr)        //returns as an object
+console.log(arr.length)
+console.log(arr[0])
+console.log(arr[1])
+console.log(arr[2])
+console.log(arr[3])
+console.log(arr[4])
+console.log(arr[5])
+console.log(arr.toString())     //converts an array to string
+console.log(arr.join(" and "))     //Interchanges the commas with specified input such as and
+ let a = [1,2,3,4,5,6]
+ a.pop()        //removes last element from the array and updates the original array
+ console.log(a)
+ console.log(a.length)
+ a.push("darshan")      //adds an element to the end array and updates the original array
+ console.log(a)
+console.log(a.length)
+a.shift()
+console.log(a)
+a.unshift("Shain")
+console.log(a)
+delete a[2]         //The index number 2 array has been deleted
+console.log(a)      //Displays as empty item in place of 3
+console.log(a.length)       //The length is same as the space is allocated for the array but no value is given to it
+console.log(a[2])       //returns as undefined cuz there is no value given to the allocated space
+   
+let a1 = [1,2,3]
+let a2 = [4,5,6]
+let a3 = [7,8,9]
+console.log(a1.concat(a2,a3))       //concatenates three arrays and returns a new array without changing the existing array
+
+let b = [3,2,1,"c","b","a"]
+console.log(b)
+b.sort()        // This method is used to sort an array alphabetically
+console.log(b)      //3,2,1 is sorted to 1,2,3 and c,b,a is sorted to a,b,c
+// b.splice(1,2)       //Starting from index 1 it removes two elements
+b.splice(1,2,22,33)   //Starting from index 1 it removes two elements and then adds 22 and 33 inplace of those removed values  
+console.log(b)
+const num = [1,2,3,4]
+console.log(num.slice(2))       //starting from number 2 index position values will be taken and a new array will be created
+console.log(num.slice(1,3))       //starting from index 1 (included) and ending with index 3(excluded) the values will be taken and a new array will be printed
+
+const n1 = [1,2,3,4,5,6]
+n1.reverse()        //Arrays values will be reversed
+console.log(n1)
+
+
+console.log("Now i'll be learning about loops in arrays")
+
+let e = [1,32,4,56,6,99]
+// for (let index = 0; index < e.length; index++) {
+//     const element = e[index];
+//     console.log(element)
+// }
+e.forEach((value, index, array) => {            //calls a function for each array element where every array element is printed with it's value , index value  and in the array which it exists
+    console.log(value, index, array)        
+});
+
+let obj = {
+    ab:1,
+    bb:2,
+    cb:3
+}
+for (const key in obj) {        //this can be used to get the keys from an array
+    if (Object.hasOwnProperty.call(obj, key)) {
+        const element = obj[key];
+        console.log(key , element)
+    }
+}
+for (const value of e) {        //this can be used to get the values from an array
+    console.log(value)
+}
+
+
+let newe = []
+for (let index = 0; index < e.length; index++) {
+    const element = e[index];
+    newe.push(element**2)       //helps to create a new array from exixting array by changing properties (there is an easier way to do it by using map function)
+}
+console.log(newe)
+
+let newnewe = e.map((e)=>{      //map function helps to create new array using the existing array by doing operations on it
+    return e**2;
+})
+console.log(newnewe)
+
+const greaterThanHundred = (e)=>{
+    if(e>100){
+        return true;
+    }
+    return false
+}
+console.log(newe.filter(greaterThanHundred))        //returns values grater than 100
+
+let arr2 = [1,2,3,4,5,6]
+
+const red = (a,b)=>{
+    return a*b
+}
+
+console.log(arr2.reduce(red))       //reduces an array to a single value bye specifying the property here it will be reduced to 1*2*3*4*5*6 = 720
+
+
+let numbers = [1,2,3,4,5]           //Lets users to add numbers into this array
+let input;
+
+while (true) {
+    input = prompt("Enter a number to add into the array and type stop to stop the process")
+    if(input.toLowerCase()=='stop'){
+        break;
+    }
+
+
+let number = parseFloat(input)      //if the string does not contain a numeral value or if the first character is not a number then it returns nan(not a number)
+if (!isNaN(number)) {
+    numbers.push(number)
+}else{
+    console.log("invalid input")
+}
+}
+alert(`The result is ${numbers}`)
+
+let m = [12,70,30,100,2,3]
+
+let divisibleByTen = (e) =>{        //filters numbers which are divisible by 10
+    if(e%10 == 0){
+        return true
+    }
+    return false
+}
+console.log(m.filter(divisibleByTen))
+
+```
