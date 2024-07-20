@@ -471,3 +471,27 @@ let divisibleByTen = (e) =>{        //filters numbers which are divisible by 10
 console.log(m.filter(divisibleByTen))
 
 ```
+## Document object model in JS (Connecting webpage with JS)
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">       
+            I am a Box
+        </div>
+    </div>
+    <script>
+        document.title = "This is Darshan here"
+        console.log(document.title)     //DOM represents the page contenet as HTML(basically mapping the entire document as an object)
+        console.log(document.body)
+        document.body.style.background = "Green"
+    </script>
+</body>
+</html>
+```
