@@ -488,7 +488,10 @@ console.log(m.filter(divisibleByTen))
     </div>
      <h1>Change Background Color</h1>
     <input type="text" id="colorInput" placeholder="Enter a color or hex code">
-    <button onclick="changeBackgroundColor()">Change Color</button>
+    <button onclick="changeBackgroundColor()">Change Color</button>     //changes the color as per the user input
+     <h1>Enter a Number</h1>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button onclick="checkNumber()">Submit</button>             //The page redirects to a google page if the number entered is greater than 4
     <script>
         document.title = "This is Darshan here"
         console.log(document.title)     //DOM represents the page contenet as HTML(basically mapping the entire document as an object)
@@ -497,6 +500,14 @@ console.log(m.filter(divisibleByTen))
                 function changeBackgroundColor() {
             var color = document.getElementById('colorInput').value;
             document.body.style.backgroundColor = color;
+              function checkNumber() {
+            var number = document.getElementById('numberInput').value;
+            if (number > 4) {
+                window.location.href = "https://www.google.com";
+            } else {
+                alert("The number is not greater than 4.");
+            }
+        }
     </script>
 </body>
 </html>
