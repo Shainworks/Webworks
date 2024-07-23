@@ -471,7 +471,7 @@ let divisibleByTen = (e) =>{        //filters numbers which are divisible by 10
 console.log(m.filter(divisibleByTen))
 
 ```
-## Document object model in JS (Connecting webpage with JS)
+## Document object model in JS (Connecting webpage with JS) and some practice questions(solved)
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -511,4 +511,15 @@ console.log(m.filter(divisibleByTen))
     </script>
 </body>
 </html>
+```
+## Acessing Parent,Children and Sibling nodes using DOM
+```js
+console.log("Here i am gonna learn about DOM children,parent and sibling nodes")
+document.body.firstElementChild     //This will give the first element in the body tag which is an elment and will ignore all other text nodes(WIll retuen the first elment inside the body)
+document.body.firstElementChild.childNodes          //This will give acess to every nodes inside this including text and comment nodes(will return every single node present in it)
+document.body.firstElementChild.children        //This will give acess to nodes which are only the elements (Will only rteurn element nodes)
+
+
+
+//There is still alot of ways to acess nodes of an html page using dom.....they need not to be memorized .....we wil get the grip as we code
 ```
