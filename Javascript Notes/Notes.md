@@ -486,11 +486,17 @@ console.log(m.filter(divisibleByTen))
             I am a Box
         </div>
     </div>
+     <h1>Change Background Color</h1>
+    <input type="text" id="colorInput" placeholder="Enter a color or hex code">
+    <button onclick="changeBackgroundColor()">Change Color</button>
     <script>
         document.title = "This is Darshan here"
         console.log(document.title)     //DOM represents the page contenet as HTML(basically mapping the entire document as an object)
         console.log(document.body)
         document.body.style.background = "Green"
+                function changeBackgroundColor() {
+            var color = document.getElementById('colorInput').value;
+            document.body.style.backgroundColor = color;
     </script>
 </body>
 </html>
