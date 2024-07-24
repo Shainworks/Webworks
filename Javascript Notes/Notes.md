@@ -523,3 +523,55 @@ document.body.firstElementChild.children        //This will give acess to nodes 
 
 //There is still alot of ways to acess nodes of an html page using dom.....they need not to be memorized .....we wil get the grip as we code
 ```
+## Acessing elements using ID's , classes and more
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting by id's classes and more</title>
+    <style>
+        .box{
+            height: 34px;
+            width: 34px;
+            margin: 34px;
+            padding: 34px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Lord Darshan1</div>
+        <div class="box">Lord Darshan2</div>
+        <div class="box"></div>Lord Darshan3</div>
+        <div class="box">Lord Darshan4</div>
+        <div class="box">Lord Darshan5</div>
+        <div id="redbox" class="box">Lord Darshan6</div>
+    </div>
+    <script>console.log("Here i will be targeting elements in html")
+        let boxes = document.getElementsByClassName("box")
+        console.log(boxes)
+        boxes[2].style.backgroundColor = "Violet"
+        document.getElementById("redbox").style.backgroundColor = "red"
+        document.querySelector(".box").style.backgroundColor = "Yellow"     //selects the first element whose class name is box
+        
+        // document.querySelectorAll(".box").style.backgroundColor = "Yellow"       //when we want to select every elmenet with the box as a class name ,,,this property won't help us .....we will have to acess each lement.....But for this command it only returns us the nodes present with an error report
+        
+        document.querySelectorAll(".box").forEach(e=>{
+            e.style.backgroundColor = "green"
+        })          //now this for each loop helps us to acess every single elements which is of the class name box
+        
+        document.getElementsByTagName("div")        //returns every element with the html div tag      
+        
+        // document.getElementsByName()      //returs element by matching the name attribute
+        
+        //elem.matches(css) --> To check if the element matches  the given css selectors
+        
+        //elem.closest(css) --> To look for thenearest ancestor that matches the given selectors (even the elements are also checked)
+        
+        //elemA.contains(elemB) --> Returns true if element b exists inside element a or returns false</script>
+</body>
+</html>
+```
