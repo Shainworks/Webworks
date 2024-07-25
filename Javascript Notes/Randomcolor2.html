@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generating random color</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 34px;
+            width: 34px;
+            margin: 34px;
+            padding: 34px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Darshan</div>
+        <div class="box">Darshan</div>
+        <div class="box">Darshan</div>
+        <div class="box">Darshan</div>
+        <div class="box">Darshan</div>
+    </div>
+    <script>
+        let boxes = document.querySelector(".container").children 
+        function getRandomColor() {
+            let val1 = Math.ceil(Math.random()*250)
+            let val2 = Math.ceil(Math.random()*250)
+            let val3 = Math.ceil(Math.random()*250)
+            return(`rgb(${val1},${val2},${val3})`);
+        }
+          
+            document.querySelectorAll(".box").forEach(e => {
+                e.style.backgroundColor = getRandomColor()
+                e.style.color = getRandomColor()
+            })
+    </script>
+</body>
+</html>
