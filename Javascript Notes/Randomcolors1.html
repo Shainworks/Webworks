@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generating random color</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 34px;
+            width: 34px;
+            margin: 34px;
+            padding: 34px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Darshan</div>
+        <div class="box">Darshan</div>
+        <div class="box">Darshan</div>
+        <div class="box">Darshan</div>
+        <div class="box">Darshan</div>
+    </div>
+    <label for="backgroundColor">Enter a random backgroundColor</label>
+    <input type="placeholder" id="backgroundColor">
+    <button onclick="changebackgroundColor()">Submit</button><br>
+    <label for="textColor">Enter a random textColor</label>
+    <input type="placeholder" id="textColor">
+    <button onclick="changetextColor()">Submit</button>
+    <script>
+        function changebackgroundColor() {
+            let a = document.getElementById("backgroundColor").value;
+            document.querySelectorAll(".box").forEach(e => {
+                e.style.backgroundColor = a;
+            })
+        }
+            function changetextColor (){
+            let b = document.getElementById("textColor").value;
+            document.querySelectorAll(".box").forEach(element => {
+                element.style.color = b;
+            });
+            }
+    </script>
+</body>
+</html>

@@ -500,6 +500,7 @@ console.log(m.filter(divisibleByTen))
                 function changeBackgroundColor() {
             var color = document.getElementById('colorInput').value;
             document.body.style.backgroundColor = color;
+                }
               function checkNumber() {
             var number = document.getElementById('numberInput').value;
             if (number > 4) {
