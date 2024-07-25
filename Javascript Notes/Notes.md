@@ -576,3 +576,52 @@ document.body.firstElementChild.children        //This will give acess to nodes 
 </body>
 </html>
 ```
+## Inserting and removing elmenets Using DOM
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Removing and inserting elements using DOM</title>
+</head>
+<body>
+    <div class="container yelloo grein">
+        <div class="box">Hey i am a box</div>
+        <div id="hide">Hey i ama also a box and i can be hidden in the script</div>
+        <div hidden>I am hidden</div>
+    </div>
+    <script>
+        console.log("Here i will be learning about adding and removing elements using Dom Manipulaton");
+        let a = document.querySelector(".container").innerHTML      //this inner html over here provides the html tags written inside the container tag
+        console.log(a);
+        let b = document.querySelector(".box").innerText    //this will provide the text written inside the box element and the follwing syntax document.querySelector(".container").innertext will also provide the same output
+        console.log(b);
+        let c = document.querySelector(".container").outerHTML  //this is similar to inner html but the difference is that it will also return the container element as well
+        console.log(c)
+        let d = document.querySelector(".container").tagName        //this will return the tag element name used to create container this can also be obtained from using nodeName but the difference is that node will return comment nodes and ext nodes while tag name element will only retuen element 
+        console.log(d);
+        let e = document.querySelector(".container").textContent        //this will only return text content inside the element minus all the tags and it also shows the whitespaces
+        console.log(e);
+      document.getElementById("hide").hidden = true         //hides the particular mentioned element (does not display in browser)
+
+        
+    //There are still many attributes method ....study notes for them
+    let div = document.createElement("div")
+    div.innerHTML = "This is darshan <i>and i added this element using js</i>"
+    div.setAttribute("class","JSELEMENT")
+    document.querySelector(".container").append(div)
+    //There are still many ways to append a elment in the container based on position (refer notes)
+    let cont = document.querySelector(".container")
+    cont.insertAdjacentHTML("afterbegin","<p>Hey hello ive been created</p>")       //This method is used to insert html elmenets with specific position such as afterbegin,beforebegin,beforeebd and afterend and instead of html we can use text or element
+    // document.querySelector(".container").remove()        //this will remove the specified elements from html
+    document.querySelector(".container").className      //this will return the calss names given to a element
+    document.querySelector(".container").classList.add("darshan")       //this will add an extra class name to the element called darsahn
+    document.querySelector(".container").classList.add("king") 
+    document.querySelector(".container").classList.remove("king")       //this will remove an extra class name from the element called king
+    document.querySelector(".container").classList.toggle("yello")      //this will add the class if this doesn't exist in the element but if it exisits it will remove it
+    document.querySelector(".container").classList.contains("darshan")      //checks whether the mentioned class is present in the class list
+    </script>
+</body> 
+</html>
+```
