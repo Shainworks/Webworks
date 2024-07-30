@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowing Bulb Effect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .bulb {
+            width: 30px;
+            height: 50px;
+            background-color: #555;
+            position: absolute;
+            bottom: 220px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 15px;
+            transition: background-color 0.3s ease;
+        }
+        .on {
+            background-color: #ffeb3b;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ffeb3b;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bulb" id="bulb"></div>
+    <button id="toggleButton">Toggle Light</button>
+
+    <script>
+        document.getElementById('toggleButton').addEventListener('click', () => {
+            document.getElementById('bulb').classList.toggle('on');
+        });
+    </script>
+</body>
+</html>
