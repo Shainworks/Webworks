@@ -778,6 +778,72 @@ document.body.firstElementChild.children        //This will give acess to nodes 
         // clearInterval(timerId)         this command will terminate the execution for the specified interval and the same goes for clearTimeout(timerID)
     </script>
 </body>
-
+</html>
+```
+## Callbacks and Promises In JS
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack and Promises</title>
+</head>
+<body>
+    <script>
+        console.log("Darsahn is a Legend");
+        console.log("Darshan's shadow Clone is also a legend");
+        setTimeout(() => {          //here js won't wait for this command for 2 secoonds rather than that it's gonna execute next set of statements
+            console.log("I am being executed after 2 seconds")
+        }, 2000);           //even if the time delay was set to zero it would have executed at the end
+        setTimeout(() => {         
+            console.log("Hey i am also being executed after 2 seconds")
+        }, 2000)
+        console.log("Hey i am not gonna wait for Settimeout cuz JS is Asynchronus in nature")
+        const callBack = (arg) => {
+          console.log(arg)
+        }
+        loadScript = (src,callBack) =>{
+          let script = document.createElement("script")
+          script.src = src
+          script.onload = callBack("Darshan")
+          document.head.append(script)
+        }
+        loadScript("https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js",callBack)
+        // I didn't understand shit about callback function but for my luck there is smthg else called promises in js , so we gonna learn that
+        console.log("Now we gonna learn about promises");
+        let prom1 = new Promise((resolve, reject)=>{
+            let a = Math.random()
+            if(a>0.5){
+                reject("The random color was not generated")
+            }
+            else{
+            setTimeout(() => {
+                console.log("Yes i am here")
+                resolve("Legend")
+            }, 3000);
+        }
+        }) 
+        let prom2 = new Promise((resolve, reject)=>{
+            let a = Math.random()
+            if(a>0.5){
+                reject("The random color was not generated 2")
+            }
+            else{
+            setTimeout(() => {
+                console.log("Yes i am here 2")
+                resolve("Legend 2")
+            }, 3000);
+        }
+        }) 
+        prom1.then((a)=>{
+                console.log(a)
+        }).catch((b)=>{
+                console.log(b)
+        })
+        let p3 = Promise.all([prom1,prom2])     //returns arrays of values when bothnthe promises are true
+        p3.then((c)=>{console.log(c);}).catch((d)=>{console.log(d);})
+    </script>
+</body>
 </html>
 ```
