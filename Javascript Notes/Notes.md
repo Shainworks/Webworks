@@ -625,3 +625,90 @@ document.body.firstElementChild.children        //This will give acess to nodes 
 </body> 
 </html>
 ```
+## Event handling in JS
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in js</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Hey i am Darshan MS</div>
+        <div class="boxes">Hey i am also Darshan MS</div>
+    </div>
+    <button id="btn">Click me</button>
+    <script>
+        let button = document.getElementById("btn")
+        button.addEventListener("click",(e)=>{
+          document.querySelector(".box").innerHTML = "<b>Bro i've been clicked</b>"
+        })
+        function changeColor(){
+            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16)
+           document.querySelector(".boxes").style.color = randomColor
+        }
+        button.addEventListener("click",changeColor)
+        //Much more events related to mouse
+//         auxclick
+// Fired when a non-primary pointing device button (e.g., any mouse button other than the left button) has been pressed and released on an element.
+
+// click
+// Fired when a pointing device button (e.g., a mouse's primary button) is pressed and released on a single element.
+
+// contextmenu
+// Fired when the user attempts to open a context menu.
+
+// dblclick
+// Fired when a pointing device button (e.g., a mouse's primary button) is clicked twice on a single element.
+
+// DOMActivate Deprecated
+// Occurs when an element is activated, for instance, through a mouse click or a keypress.
+
+// DOMMouseScroll Deprecated Non-standard
+// Occurs when mouse wheel or similar device is operated and the accumulated scroll amount is over 1 line or 1 page since last event.
+
+// mousedown
+// Fired when a pointing device button is pressed on an element.
+
+// mouseenter
+// Fired when a pointing device (usually a mouse) is moved over the element that has the listener attached.
+
+// mouseleave
+// Fired when the pointer of a pointing device (usually a mouse) is moved out of an element that has the listener attached to it.
+
+// mousemove
+// Fired when a pointing device (usually a mouse) is moved while over an element.
+
+// mouseout
+// Fired when a pointing device (usually a mouse) is moved off the element to which the listener is attached or off one of its children.
+
+// mouseover
+// Fired when a pointing device is moved onto the element to which the listener is attached or onto one of its children.
+
+// mouseup
+// Fired when a pointing device button is released on an element.
+
+// mousewheel Deprecated Non-standard
+// Fired when a mouse wheel or similar device is operated.
+
+// MozMousePixelScroll Deprecated Non-standard
+// Fired when a mouse wheel or similar device is operated.
+
+// webkitmouseforcechanged Non-standard
+// Fired each time the amount of pressure changes on the trackpadtouchscreen.
+
+// webkitmouseforcedown Non-standard
+// Fired after the mousedown event as soon as sufficient pressure has been applied to qualify as a "force click".
+
+// webkitmouseforcewillbegin Non-standard
+// Fired before the mousedown event.
+
+// webkitmouseforceup Non-standard
+// Fired after the webkitmouseforcedown event as soon as the pressure has been reduced sufficiently to end the "force click".
+//Still there is more of it which can be refered in MDN Docs --> https://developer.mozilla.org/en-US/docs/Web/Events
+    </script>
+</body>
+</html>
+```
