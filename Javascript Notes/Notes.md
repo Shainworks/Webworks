@@ -712,3 +712,72 @@ document.body.firstElementChild.children        //This will give acess to nodes 
 </body>
 </html>
 ```
+## Event bubbling, setTimeout() and setInterval() in JS
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+</head>
+<style>
+    .child{
+        background-color: aqua;
+        border: 2px solid black;
+        margin: 14px;
+        padding: 14px;
+        cursor: pointer;
+    }
+    .childContainer{
+        background-color: rgb(9, 6, 232);
+        border: 2px solid black;
+        margin: 14px;
+        padding: 14px;
+        cursor: pointer;
+    }
+    .container{
+        background-color: rgb(224, 243, 20);
+        border: 2px solid black;
+        margin: 14px;
+        padding: 14px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="childContainer">
+            <div  class="child">I am aThe youngest</div>      <!--As the child is nested inside childcontainer and container it will also call those associated events(parent of the child(nested)) when the child event is called this is called event bubbling-->  
+        </div>
+    </div>
+    <script>
+        document.querySelector(".child").addEventListener("click", (e) => {
+            e.stopPropagation()
+            alert("The child was tampered")     //this command will stop event bubbling 
+        })
+        document.querySelector(".childContainer").addEventListener("click", (e) => {
+            e.stopPropagation()
+            alert("The childContainer was tampered")
+        })
+        document.querySelector(".container").addEventListener("click", (e) => {
+            e.stopPropagation()
+            alert("The container was tampered")
+        })
+        function changeColor(){
+            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16)
+           return randomColor
+        }
+        setInterval(() => {
+            document.querySelector(".container").style.background = changeColor()
+            document.querySelector(".childContainer").style.background = changeColor()
+        },100);     //does the given task iteratively by taking a given cooldown
+        setTimeout(() => {
+            document.querySelector(".child").style.background = changeColor()
+        }, 1000);       //does the task only once by taking the giveen cooldown interval
+        // clearInterval(timerId)         this command will terminate the execution for the specified interval and the same goes for clearTimeout(timerID)
+    </script>
+</body>
+
+</html>
+```
