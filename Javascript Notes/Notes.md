@@ -847,3 +847,63 @@ document.body.firstElementChild.children        //This will give acess to nodes 
 </body>
 </html>
 ```
+## Loading a JS file using Promises
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+</head>
+<style>
+    .child{
+        background-color: aqua;
+        border: 2px solid black;
+        margin: 14px;
+        padding: 14px;
+        cursor: pointer;
+    }
+    .childContainer{
+        background-color: rgb(9, 6, 232);
+        border: 2px solid black;
+        margin: 14px;
+        padding: 14px;
+        cursor: pointer;
+    }
+    .container{
+        background-color: rgb(224, 243, 20);
+        border: 2px solid black;
+        margin: 14px;
+        padding: 14px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="childContainer">
+            <div  class="child">I am aThe youngest</div>      <!--As the child is nested inside childcontainer and container it will also call those associated events(parent of the child(nested)) when the child event is called this is called event bubbling-->  
+        </div>
+    </div>
+    <script>
+       function loadScript(src) {
+        return new Promise ((resolve , reject) => {
+            const script  = document.createElement('script')
+            script.src = src;
+            script.onload = () => resolve(`The following script was loaded : ${src}`)
+            script.onerror = () => reject(`There was an error in loading this following script : ${src}`)
+            document.head.append(script)
+        })
+       }
+       loadScript('EventBubbling.js')
+        Promise.then((result) => {
+            alert(result)
+        }).catch((err) => {
+            alert(err)
+        });
+    </script>
+</body>
+
+</html>
+```
