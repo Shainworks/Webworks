@@ -907,3 +907,59 @@ document.body.firstElementChild.children        //This will give acess to nodes 
 
 </html>
 ```
+## Async, Await and Fetching API's in JS
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Fetching in JS</title>
+</head>
+<body>
+    <script>
+        function getData(){
+            //Basically we are making an simulation for getting data from server which usually takes time so we are delaying it by setting a timer
+            return new Promise ((resolve , reject)=>{
+                setTimeout(() => {
+                    resolve(6969)
+                }, 3000);
+            })
+        }
+        console.log("Loading DArsahn")
+        console.log("Darshan is taking time to load")
+        console.log("Darshan has been loaded");
+        let data = getData()
+        console.log(data)
+        // data.then((result) => {
+        //     console.log("Hey i am being executed With these promises");
+        //     console.log("YEs it took us like 3s to do so")
+        //     console.log(result)
+        // })       //This method is used to mimic async and await features but instead of this we are gonna use the original ones .....basically it is nthg but to control the asynchronus process of the JS
+        console.log("I was executed Before the Promises")
+        async function datas() {
+            return new Promise ((resolve,reject)=>{
+                setTimeout(() => {
+                    resolve(969696969)
+                }, 4000);
+            })
+        }
+        async function main() {
+        console.log("Loading DArsahn2")
+        console.log("Darshan2 is taking time to load")
+        console.log("Darshan2 has been loaded");
+        let data1 = await datas()
+        console.log(data1)
+        console.log("Hey i am being executed with this Promise guys")
+        }
+        main()
+        async function api(){
+        let x =  await fetch('https://jsonplaceholder.typicode.com/todos/1')
+        let data2 = await x.json()
+        console.log(data2)
+        }
+        api()
+    </script>
+</body>
+</html>
+```
