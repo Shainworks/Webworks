@@ -19,10 +19,7 @@ const randomDelay = () => {
 
 const startBlinking = (element) => {
     // Stop any existing blinking interval
-    if (currentIntervalId) {
         clearInterval(currentIntervalId);
-    }
-
     currentIntervalId = setInterval(() => {
         if (element.innerHTML.endsWith("...")) {
             element.innerHTML = element.innerHTML.slice(0, -3);
@@ -48,10 +45,9 @@ async function main() {
     }
 
     // Clear the last blinking interval if needed
-    if (currentIntervalId) {
         await randomDelay()
         clearInterval(currentIntervalId);
-    }
+    
 }
 
 main();
