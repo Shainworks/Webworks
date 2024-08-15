@@ -49,6 +49,7 @@ async function main() {
 
     // Clear the last blinking interval if needed
     if (currentIntervalId) {
+        await randomDelay()
         clearInterval(currentIntervalId);
     }
 }
