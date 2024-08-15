@@ -1,0 +1,28 @@
+img{
+    width: 100%;
+    height: auto; 
+    display: block; 
+    margin: 0;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.box{
+    height: 100px;
+    width: 300px; 
+    background-color: black;
+    color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid green;
+    margin: 10px;
+    transform: translateY(-750%);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
