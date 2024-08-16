@@ -963,3 +963,79 @@ document.body.firstElementChild.children        //This will give acess to nodes 
 </body>
 </html>
 ```
+## Try and catch, throw and Error Handling in JS
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling In JS</title>
+</head>
+
+<body>
+    <script>
+        let a = prompt("Enter the first number")
+        let b = prompt("Enter the second number")
+        let sum = parseInt(a) + parseInt(b)     //when a string is given instead of a number it outputs it as NAN, now instead of it we  want js to throw an error so for that we will do this
+        if (isNaN(a) || isNaN(b)) {
+            throw SyntaxError("Well enter a number Dumbass")
+        }
+        // console.log("The sum of the number is ",sum * x);   //Here X is not defined so to handle that we weill use try and catch method where we will remove the error thrown by Js and simply pass a message
+        try {
+            console.log("The sum of the number is ", sum * x);
+        } catch (error) {
+            console.log("Well Define the X you DUmbAss")
+        }
+        async function main() {
+            try {
+                await new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        try {
+                            console.log("Thesum is", sum * x)
+                            resolve()
+                        } catch (error) {
+                            reject(error)
+                        }
+                    }, 1000);
+                })
+            } catch (error) {
+                console.log("Well i am of no use here")     //here catch wont work here because the function is executed when the engine has already left the try and catch construct well this can be avided using async and await and that is what i have done here
+            }
+        }
+        main()
+        async function main2() {
+            let x = 2;
+            try {
+                await new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        try {
+                            console.log("Thesum is", sum * x)
+                            resolve()
+                        } catch (error) {
+                            reject(error)
+                        }
+                    }, 1000);
+                })
+                return true
+            } catch (error) {
+                console.log("Well i am of no use here")     //here catch wont work here because the function is executed when the engine has already left the try and catch construct well this can be avided using async and await and that is what i have done here
+                return false
+            }
+            finally{
+                console.log("Ok now all the files will close")
+            }       // here finally is used because if there is a return key in the try block it wouldn't have loaded further commands if it were true or false ....so finally is used to give a statement after returning a value
+        }
+        main2()
+        // try {
+        //     hey;     //Herer the variable is not defined
+        // } catch (error) {
+        //     alert(error.name)
+        //     alert(error.message)
+        //     alert(error.stack)
+        // }        //well herer the error object is used to retrieve the specified messages
+    </script>
+</body>
+</html>\
+```
