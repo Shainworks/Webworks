@@ -1039,3 +1039,76 @@ document.body.firstElementChild.children        //This will give acess to nodes 
 </body>
 </html>\
 ```
+## Concepts of OOP'S in JS
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object oriented Programming  </title>
+</head>
+<body>
+    <script>
+        let obj = {
+            a:1,
+            b:"One"
+        }
+        console.log(obj)
+        let rabbit = {
+            jumps:true
+        }
+        let animal = {
+            poops:true
+        }
+        rabbit.__proto__ = animal       //This adds the additional poops property to the rabbit object has an prototype
+        //Basically  it sets rabbit.[[Prototype]]=animal
+        //Now ignore the above code cuz we have understood the property inheritence and will now learn to how to use it using classes and object
+        class kuchbhi{
+            constructor(name){
+                this.name = name
+                console.log("Object will be created")
+            }
+            eats(){
+                console.log("Ae lowda kana ka rha hai")
+            }
+            nthg(){
+                console.log("Isko kuch nhi aata")
+            }
+        }
+        class boss extends kuchbhi{
+            constructor(name){
+                super(name)     //this is overriding the construcor where i am inheriting the parameters of kuchbhi and using it
+                console.log("Object will be created but will be os Shain's")
+            }
+            eats(){
+                super.eats()        //Now the kuchbhi class objects will also be added here
+                console.log("Ae lowda kana ka rha hai aur override kr rha hai")
+            }   //Here when i create the same eats then the values will not be taken from kuchbhi this is called method overriding
+        }        
+        let a = new kuchbhi("Darshan")
+        console.log(a)
+        let b = new boss("Shain")
+        console.log(b)
+        //Getters and Setters Used in Js
+        class User{
+            constructor(name){
+                this.name = name    //Now this will invke the setter
+            }
+            get name (){
+                return this._name
+            }
+            set name(value){
+                if(value.length < 4){
+                console.log("The given name is too short")
+                return;
+                }
+                this._name = value
+            }
+        }
+        let user = new User("Johnnnn")
+        console.log(user.name)
+    </script>
+</body>
+</html>
+```
