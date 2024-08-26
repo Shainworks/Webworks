@@ -1112,3 +1112,66 @@ document.body.firstElementChild.children        //This will give acess to nodes 
 </body>
 </html>
 ```
+## Advanced JS Topics (End of the Begining)
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function main() {
+            return new Promise((resolve,reject)=>{
+                setTimeout(() => {
+                   resolve("Hello")
+                }, 2000);
+            })
+        }
+        async function main2(){
+            return new Promise((resolve)=>{
+                setTimeout(() => {
+                    resolve("world")
+                }, 2000);
+            })
+        }
+        (async function iife(){
+        let a = await main()
+        console.log(a)
+        let b = await main2()
+        console.log(b)  
+        })()
+        console.log(a1)
+        let [x,y,...rest] = [1,2,4,2,3,4,23,43]
+        console.log(x,y,rest)
+        const obj = {
+            q:34,
+            w:34,
+            e:3
+        }
+        const {q,w} = obj
+        console.log(q,w)
+        let arr = [1,34,45]
+        function avg(a,b,c){
+            let total = (a+b+c)/3
+            return total 
+        }
+        console.log(avg(arr[0],arr[1],arr[2]))      //this is one of the longest method The shorter one is prescribed below
+        console.log(avg(...arr))        //gives the same output has above
+        var a1 = 23         //JS only hoists the declarations , not the initializations . The variable will be undefined until the line where it is initialized is reached....and function expressions and class expressions of var's aren't hoisted
+        function calculateInterest(principal,rate,time) {
+            if (principal && rate && time) {
+                const interest = (principal * rate * time) / 100;
+                console.log(`The Simple Interest is: ₹${interest}`)
+            } else {
+              console.log("Please fill out all fields.");
+            }
+        }
+        calculateInterest(2332,23,343)
+        calculateInterest(2332,23)
+    </script>
+</body>
+</html>
+```
