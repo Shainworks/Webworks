@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>'YTMUSIC - Web Player: Music only for Darshan'</title>
+    <link rel="shortcut icon" type="image/x-icon" href="icn/favicon.ico" />
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/utility.css">
+</head>
+
+<body>
+    <div class="container flex bg-black font">
+        <div class="left m-1 p-1">
+            <div class="close">
+                <img class="invert" src="icn/close.svg" alt="">
+            </div>
+            <div class="top-left bg-grey rounded m-1 p-1">
+                <div class="logo">
+                    <img xmlns="http://www.w3.org/2000/svg" class="logo style-scope ytmusic-logo" alt="Youtube logo"
+                        src="https://music.youtube.com/img/on_platform_logo_dark.svg">
+                </div>
+                <ul>
+                    <li><img class="invert" src="icn/home.svg" alt="Home">Home</li>
+                    <li><img class="invert" src="icn/Explore.svg" alt="Explore">Explore</li>
+                    <li><img class="invert" src="icn/library.svg" alt="Libraries">Library</li>
+                </ul>
+            </div>
+            <div class="bottom-left bg-grey rounded m-1 p-1">
+                <div class="heading">
+                    <img class="invert" src="icn/Playlist.svg" alt="Playlist">
+                    <p>Your Musics</p>
+                </div>
+                <div class="Music-list">
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="right bg-grey rounded">
+            <div class="header rounded">
+                <div class="nav">
+                    <div class="hamburger-container">
+                        <img class="invert hamburger" src="icn/hamburger.svg" alt="">
+                        <img class="invert" src="icn/left.svg" alt="Left">
+                        <img class="invert" src="icn/right.svg" alt="Right">
+                    </div>
+                </div>
+                <div class="st-button-container">
+                    <div class="st-buttons">Signup</div>
+                    <div class="st-buttons">Login</div>
+                </div>
+            </div>
+            <div class="Genere genere-container p-1">
+                <div class="genere" data-song="song1.mp3">Do explore every Playlist Each one of them is a gem ^^</div>
+            </div>
+            <div class="yt-playlists">
+                <p class="playlist-heading">Youtube Playlists</p>
+                <div class="card-container">
+                    <!-- <div class="card" data-folder="Album1">
+                        <div class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50"
+                                fill="none">
+                                <circle cx="12" cy="12" r="12" fill="#000000" fill-opacity="0.5" />
+                                <path
+                                    d="M9.5 11.1998V12.8002C9.5 14.3195 9.5 15.0791 9.95576 15.3862C10.4115 15.6932 11.0348 15.3535 12.2815 14.6741L13.7497 13.8738C15.2499 13.0562 16 12.6474 16 12C16 11.3526 15.2499 10.9438 13.7497 10.1262L12.2815 9.32594C11.0348 8.6465 10.4115 8.30678 9.95576 8.61382C9.5 8.92086 9.5 9.6805 9.5 11.1998Z"
+                                    fill="#FFFFFF" />
+                            </svg>
+                        </div>
+                        <img src="https://yt3.googleusercontent.com/O6mOyuoOZfr6ZpazS-DB7H9V9odGLhHXiZ6dEXSnepYamSs0nChBntroES4oxLhReeMgd8ilof4=s576"
+                            alt="Banner">
+                        <h3>Darshan • 45 tracks</h3>
+                        <p class="Playlist-paragraph">Playlist Created By Darshan to boost your feelings to it's upmost
+                            boundaries</p>
+                    </div>
+                    <div class="card" data-folder="Album2">
+                        <div class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50"
+                                fill="none">
+                                <circle cx="12" cy="12" r="12" fill="#000000" fill-opacity="0.5" />
+                                <path
+                                    d="M9.5 11.1998V12.8002C9.5 14.3195 9.5 15.0791 9.95576 15.3862C10.4115 15.6932 11.0348 15.3535 12.2815 14.6741L13.7497 13.8738C15.2499 13.0562 16 12.6474 16 12C16 11.3526 15.2499 10.9438 13.7497 10.1262L12.2815 9.32594C11.0348 8.6465 10.4115 8.30678 9.95576 8.61382C9.5 8.92086 9.5 9.6805 9.5 11.1998Z"
+                                    fill="#FFFFFF" />
+                            </svg>
+                        </div>
+                        <img src="https://yt3.googleusercontent.com/O6mOyuoOZfr6ZpazS-DB7H9V9odGLhHXiZ6dEXSnepYamSs0nChBntroES4oxLhReeMgd8ilof4=s576"
+                            alt="Banner">
+                        <h3>Darshan • 45 tracks</h3>
+                        <p class="Playlist-paragraph">Playlist Created By Darshan to boost your feelings to it's upmost
+                            boundaries</p>
+                    </div> -->
+                </div>
+                <div class="playbar">
+                    <div class="seekbar">
+                        <div class="circle">
+
+                        </div>
+                    </div>
+                    <div class="bar-content">
+                        <div class="song-info"></div>
+                        <div class="song-buttons invert">
+                            <img width="30px" id="Previous" src="icn/prevplayer.svg" alt="Previous Song Btn">
+                            <img width="30px" id="Play" src="icn/play.svg" alt="Play Btn">
+                            <img width="30px" id="Next" src="icn/nextplayer.svg" alt="Next Song Btn">
+                        </div>
+                        <div class="time-volume">
+                            <div class="song-time"></div>
+                            <div class="volume">
+                                <img class="invert" width="25px" src="icn/volume.svg" alt="">
+                                <div class="range">
+                                    <input type="range" name="volume" id="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="frontend/script.js"></script>
+</body>
+
+</html>

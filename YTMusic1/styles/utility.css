@@ -1,0 +1,57 @@
+.border{
+    border: 1px solid grey;
+}   
+.flex{
+    display:flex;
+}
+.justify-center{
+    justify-content: center;
+}
+.items-center{
+    align-items: center;
+}
+.bg-black{
+    background-color: black;
+    color: white;
+}
+.invert{
+    filter: invert(1);
+}
+.bg-grey{
+    background-color: #121212;
+}
+.rounded{
+    border-radius:7px;
+}
+.font{
+    font-family: "Roboto", "Noto", sans-serif
+}
+.m-1{
+    margin: 5px;
+}
+.p-1{
+    padding: 10px;
+}
+/* Custom Scrollbar for Dark Theme */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #2a2a2a; /* Background of the track (dark gray) */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #444444; /* Color of the scrollbar thumb (slightly lighter gray) */
+    border-radius: 10px; /* Rounded corners for the thumb */
+    border: 3px solid #2a2a2a; /* Creates padding around the thumb, matching the track color */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #666666; /* Color when hovering over the scrollbar thumb */
+}
+
+::-webkit-scrollbar-corner {
+    background: #2a2a2a; /* Color of the bottom corner where horizontal and vertical scrollbars meet */
+}
