@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // here i am testing whether my post request is working at end point "/" which i specified in post request in js file
+        //same thing can be donw with the GET request just by changing the method to "GET"...the same apllies for every other requests
+        //and this is not the best way to test this ^^
+        async function testPost() { 
+            let a = await fetch("/",{method: "POST"})
+            let b = await a.text()
+            console.log(b)
+        }
+        testPost()
+    </script>
+</body>
+</html>
