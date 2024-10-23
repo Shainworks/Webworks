@@ -1,0 +1,13 @@
+Breakpoint prefixes
+
+Breakpoint prefix	Minimum width	CSS
+sm	                   640px	     @media (min-width: 640px) { ... }
+md	                   768px	     @media (min-width: 768px) { ... }
+lg	                   1024px	     @media (min-width: 1024px) { ... }
+xl	                   1280px	     @media (min-width: 1280px) { ... }
+2xl	                   1536px	     @media (min-width: 1536px) { ... }
+max-sm	               640px         @media not all and (min-width: 640px) { ... }
+max-md	               768px         @media not all and (min-width: 768px) { ... }
+max-lg	               1024px        @media not all and (min-width: 1024px) { ... }
+max-xl	               1280px        @media not all and (min-width: 1280px) { ... }
+max-2xl	               1536px        @media not all and (min-width: 1536px) { ... }
