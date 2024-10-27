@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Development Concepts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align:center;
+        }
+        h2 {
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .code {
+            background-color: #f4f4f4;
+            border-left: 4px solid #333;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .note {
+            background-color: #ffef96;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #ff6f00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Web Development Concepts</h1>
+
+        <h2>1. Table Elements</h2>
+        <p>To create a data table, start with a <code>&lt;table&gt;</code> container element. Fill it with <code>&lt;tr&gt;</code> elements for each row and <code>&lt;th&gt;</code> elements for header cells or <code>&lt;td&gt;</code> elements for data cells.</p>
+        <p>To display a title for a table, embed a <code>&lt;caption&gt;</code> element within the table container. You can position the caption at the bottom using CSS:</p>
+        <div class="code">caption { caption-side: bottom; }</div>
+
+        <h2>2. Formatting a Data Table</h2>
+        <p>To style table borders, alignment, and padding, use the following CSS properties:</p>
+        <div class="code">
+            table, th, td { border: thin solid; }<br>
+            th, td { text-align: left; padding: 10px; }<br>
+            table { border-width: medium; }<br>
+            th { border-bottom-width: thick; }<br>
+            table { border-collapse: collapse; }
+        </div>
+
+        <h2>3. CSS Structural Pseudo-Class Selectors</h2>
+        <p>Pseudo-classes conditionally select elements. Here are some examples:</p>
+        <div class="code">
+            tr:first-of-type { background-color: palegreen; }<br>
+            ul > li:last-of-type { background-color: palegreen; }<br>
+            td:nth-of-type(3) { text-align: right; }<br>
+            tr:nth-of-type(even) { background-color: lightblue; }
+        </div>
+
+        <h2>4. thead and tbody Elements</h2>
+        <p>To differentiate header cells at the top of a table from those at the left, use <code>&lt;thead&gt;</code> and <code>&lt;tbody&gt;</code> elements:</p>
+        <div class="code">
+            thead th { background-color: midnightblue; }<br>
+            tbody th { background-color: mediumvioletred; }
+        </div>
+
+        <h2>5. Cell Spanning</h2>
+        <p>To merge cells, use the <code>colspan</code> or <code>rowspan</code> attributes:</p>
+        <div class="code">
+            &lt;tr&gt;&lt;th colspan="2"&gt;Events&lt;/th&gt;&lt;/tr&gt;<br>
+            &lt;th rowspan="2"&gt;Mesozoic&lt;/th&gt;
+        </div>
+
+        <h2>6. Web Accessibility</h2>
+        <p>For web accessibility, consider embedding a <code>&lt;details&gt;</code> element in the table’s caption:</p>
+        <div class="code">
+            &lt;table&gt;<br>
+            &nbsp;&nbsp;&lt;caption&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;details&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;summary&gt;Table Description&lt;/summary&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Detailed description of the table.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/details&gt;<br>
+            &nbsp;&nbsp;&lt;/caption&gt;<br>
+            &lt;/table&gt;
+        </div>
+
+        <h2>7. CSS display Property with Table Values</h2>
+        <p>Use the CSS <code>display</code> property to create table-like layouts:</p>
+        <div class="code">
+            .table { display: table; }<br>
+            .table-row { display: table-row; }<br>
+            .table-cell { display: table-cell; }
+        </div>
+
+        <h2>8. Bitmap Image Formats</h2>
+        <p>There are three common bitmap image formats on the web: GIF, JPEG, and PNG.</p>
+        <h3>GIF</h3>
+        <p>GIF supports up to 256 colors and uses lossless compression. It is suitable for simple images with limited colors and supports animation.</p>
+        <h3>JPEG</h3>
+        <p>JPEG supports 16 million colors and uses lossy compression. It is ideal for photographs and images with many colors.</p>
+        <h3>PNG</h3>
+        <p>PNG supports a range of transparency levels and provides lossless compression. It is suitable for images that need to maintain high quality with transparency effects.</p>
+    </div>
+</body>
+</html>

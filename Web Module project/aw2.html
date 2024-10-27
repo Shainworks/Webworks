@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        header, nav, section, footer {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Future of HTML5</h1>
+        <h2>Embracing the New Standards</h2>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#hello-html5">Hello HTML5</a></li>
+            <li><a href="#loose-syntax">Loose Syntax</a></li>
+            <li><a href="#document-structure">Document Structure</a></li>
+            <li><a href="#semantics">Adding Semantics</a></li>
+            <li><a href="#media">Open Media Effort</a></li>
+            <li><a href="#canvas">Client-Side Graphics</a></li>
+        </ul>
+    </nav>
+
+    <section id="hello-html5">
+        <h2>Hello HTML5</h2>
+        <p>HTML5 introduces a simple and more flexible way to write web documents. Here is an example of a basic HTML5 document:</p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Hello HTML5 World&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello HTML5&lt;/h1&gt;
+    &lt;p&gt;Welcome to the future of markup!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <p>The <code>&lt;!DOCTYPE html&gt;</code> declaration is simplified and the document is checked for conformance to specifications instead of traditional validation.</p>
+    </section>
+
+    <section id="loose-syntax">
+        <h2>Loose Syntax</h2>
+        <p>HTML5 allows a degree of syntax variability. Here is an example with optional elements and inferred close tags:</p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;title&gt;HTML5 Tag Soup Test&lt;/title&gt;
+&lt;h1 title="more sloppy markup ahead!"&gt;HTML5&lt;/h1&gt;
+&lt;p id=p1&gt;Back to the future of loose markup!? 
+&lt;p&gt;Yes it looks that way 
+&lt;ul&gt;
+    &lt;li&gt;optional elements 
+    &lt;LI&gt;case is no problem 
+    &lt;li id=noquotes&gt;quotes optional in many cases 
+    &lt;li&gt;inferred close tags 
+&lt;/ul&gt;
+&lt;p&gt;Oh my 
+&lt;br&gt;
+&lt;br /&gt;
+&lt;p&gt;Intermixing markup styles!&lt;/p&gt;</code></pre>
+    </section>
+
+    <section id="document-structure">
+        <h2>Document Structure Changes</h2>
+        <p>HTML5 introduces new structural elements like <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, and <code>&lt;section&gt;</code>:</p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;HTML5 header and footer example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Welcome to the Future World of HTML5.&lt;/h1&gt;
+        &lt;h2&gt;Don't be scared it isn't that hard!&lt;/h2&gt;
+    &lt;/header&gt;
+    &lt;p&gt;Some body content here.&lt;/p&gt;
+    &lt;p&gt;Some more body content here.&lt;/p&gt;
+    &lt;footer&gt;
+        &lt;p&gt;Content of this example is not under copyright.&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </section>
+
+    <section id="semantics">
+        <h2>Adding Semantics</h2>
+        <p>HTML5 enhances semantics with new elements like <code>&lt;mark&gt;</code>, <code>&lt;time&gt;</code>, and <code>&lt;figure&gt;:</p>
+        <pre><code>&lt;p&gt;Here comes &lt;mark&gt;marked text&lt;/mark&gt; was it obvious?&lt;/p&gt;
+
+&lt;p&gt;Today it is &lt;time&gt;2009-07-08&lt;/time&gt; which is an interesting date.&lt;/p&gt;
+
+&lt;figure id="fig1"&gt;
+    &lt;img src="figure.png" height="100" width="100" alt="A screen capture of the figure element in action"&gt;
+    &lt;figcaption&gt;Figure Ex-1&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+    </section>
+
+    <section id="media">
+        <h2>HTML5’s Open Media Effort</h2>
+        <p>HTML5 supports native media elements such as <code>&lt;video&gt;</code> and <code>&lt;audio&gt;:</p>
+        <pre><code>&lt;video src="http://htmlref.com/ch2/html_5.mp4" width="640" height="360" controls&gt;
+    &lt;strong&gt;HTML5 video element not supported&lt;/strong&gt;
+&lt;/video&gt;
+
+&lt;audio src="http://htmlref.com/ch2/music.wav" controls&gt;&lt;/audio&gt;</code></pre>
+    </section>
+
+    <section id="canvas">
+        <h2>Client-Side Graphics with &lt;canvas&gt;</h2>
+        <p>The <code>&lt;canvas&gt;</code> element allows for rendering graphics on the client side:</p>
+        <pre><code>&lt;canvas id="canvas" width="300" height="300"&gt;
+    &lt;strong&gt;Canvas Supporting Browser Required&lt;/strong&gt;
+&lt;/canvas&gt;
+
+&lt;script&gt;
+    window.onload = function() {
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext("2d");
+        context.strokeStyle = "blue";
+        context.strokeRect(10, 10, 150, 50);
+        context.fillStyle = "rgba(218, 0, 0, 0.4)";
+        context.fillRect(150, 30, 75, 75);
+    }
+&lt;/script&gt;</code></pre>
+    </section>
+
+    <footer>
+        <p>Content of this example is not under copyright.</p>
+    </footer>
+</body>
+</html>

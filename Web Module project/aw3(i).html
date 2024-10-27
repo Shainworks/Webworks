@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to CSS</title>
+    <style>
+
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            background-color: #ffffff;
+            margin: 20px 0;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+         h2, h3 {
+            color: #35424a;
+        }
+        code {
+            background-color: #eef;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .code-block {
+            background-color: #eef;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #35424a;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            background-color: #ffffff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #35424a;
+        }
+        p {
+            line-height: 1.6;
+        }
+        code {
+            background-color: #e4e4e4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Introduction to CSS</h1>
+    </header>
+    <main>
+       <section>
+            <h2>Overview</h2>
+            <p>Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in HTML or XML. CSS is designed to enable the separation of content and presentation, including layout, colors, and fonts.</p>
+        </section>
+
+        <section>
+            <h2>CSS Syntax</h2>
+            <p>A CSS rule set consists of a selector and a declaration block. The selector points to the HTML element you want to style. The declaration block contains one or more declarations separated by semicolons. Each declaration includes a CSS property name and a value, separated by a colon.</p>
+            <div class="code-block">
+                <code>
+                    selector {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;property: value;<br>
+                    }
+                </code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Selectors</h2>
+            <h3>Type Selector</h3>
+            <p>A type selector selects all instances of an element type. For example, to select all <code>&lt;p&gt;</code> elements:</p>
+            <div class="code-block">
+                <code>
+                    p {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;color: blue;<br>
+                    }
+                </code>
+            </div>
+            <h3>Class Selector</h3>
+            <p>A class selector selects elements with a specific class attribute. Use a dot (.) followed by the class name:</p>
+            <div class="code-block">
+                <code>
+                    .classname {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;color: green;<br>
+                    }
+                </code>
+            </div>
+            <h3>ID Selector</h3>
+            <p>An ID selector selects a single element with a specific id attribute. Use a hash (#) followed by the id name:</p>
+            <div class="code-block">
+                <code>
+                    #idname {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;color: red;<br>
+                    }
+                </code>
+            </div>
+        </section>
+
+
+        <section>
+            <h2>Font Properties</h2>
+            <p>Font properties in CSS allow you to control the appearance of text. Some common font properties include:</p>
+            <ul>
+                <li><code>font-family</code>: Specifies the font family for text.</li>
+                <li><code>font-size</code>: Specifies the size of the font.</li>
+                <li><code>font-weight</code>: Specifies the weight (boldness) of the font.</li>
+                <li><code>font-style</code>: Specifies the style of the font (e.g., normal, italic, oblique).</li>
+                <li><code>font-variant</code>: Specifies whether or not a text should be displayed in small-caps font.</li>
+            </ul>
+            <pre><code>p {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+}</code></pre>
+        </section>
+
+        <section>
+            <h2>Text Properties</h2>
+            <p>Text properties in CSS allow you to control the appearance and layout of text. Some common text properties include:</p>
+            <ul>
+                <li><code>color</code>: Specifies the color of the text.</li>
+                <li><code>text-align</code>: Specifies the horizontal alignment of the text (e.g., left, right, center, justify).</li>
+                <li><code>text-decoration</code>: Specifies the decoration added to the text (e.g., none, underline, overline, line-through).</li>
+                <li><code>text-transform</code>: Specifies the capitalization of the text (e.g., none, capitalize, uppercase, lowercase).</li>
+                <li><code>line-height</code>: Specifies the height of a line box.</li>
+                <li><code>letter-spacing</code>: Specifies the space between characters.</li>
+            </ul>
+            <pre><code>h1 {
+    color: #35424a;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}</code></pre>
+        </section>
+    </main>
+</body>
+</html>

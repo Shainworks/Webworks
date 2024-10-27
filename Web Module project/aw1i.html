@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Web Programming</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+        .main h2, .main h3 {
+            color: #333;
+        }
+        .main p, .main code {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Introduction to Web Programming</h1>
+        </div>
+    </header>
+    <div class="container main">
+        <h2>Module 1: Traditional HTML and XHTML</h2>
+        
+        <h3>1. First Look at HTML and XHTML</h3>
+        <p>Hello HTML and XHTML World</p>
+        <p>HTML and XHTML: Version History</p>
+        <p>HTML and XHTML DTDs: The Specifications Up Close</p>
+        <p>(X)HTML Document Structure</p>
+        <p>Browsers and (X)HTML</p>
+        <p>The Rules of (X)HTML</p>
+        <p>Major Themes of (X)HTML</p>
+        <p>The Future of Markup—Two Paths?</p>
+
+        <h3>2. Basic Syntax</h3>
+        <p>HTML uses tags to specify categories of content. Elements are defined by tags.</p>
+        <p>Tag format: must be written in lower case letters.</p>
+        <p>Example of a tag: <code>&lt;p&gt; this is simple &lt;/p&gt;</code></p>
+        <p>If a tag has attributes, they appear between its name and the right bracket of the opening tag.</p>
+        <p>Example: <code>&lt;!-- This is a comment --&gt;</code></p>
+
+        <h3>3. HTML Document Structure</h3>
+        <p>Every XHTML document must have <code>&lt;html&gt;</code> as its root. A document consists of a head and a body.</p>
+        <p>The <code>&lt;title&gt;</code> tag is used to give the document a title.</p>
+        <p>Example:</p>
+        <pre><code>
+&lt;html&gt;
+  &lt;head&gt; &lt;title&gt; Our first document &lt;/title&gt; &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt; Greetings from your Webmaster! &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+        </code></pre>
+
+        <h3>4. Basic Text Markup</h3>
+        <h4>Paragraphs</h4>
+        <p>The <code>&lt;p&gt;</code> tag breaks the current line and inserts a blank line.</p>
+        <h4>Line breaks</h4>
+        <p>The effect of the <code>&lt;br /&gt;</code> tag is the same as that of <code>&lt;p&gt;</code> except for the blank line.</p>
+        <h4>Preserving white spaces</h4>
+        <p>The <code>&lt;pre&gt;</code> tag preserves whitespaces in text.</p>
+        <h4>Headings</h4>
+        <p>Six levels of headings (1-6) specified with <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>.</p>
+
+        <h4>Example of Headings:</h4>
+        <pre><code>
+&lt;html&gt;
+  &lt;head&gt; &lt;title&gt; Our first document &lt;/title&gt; &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt; Aidan’s Airplanes &lt;/h1&gt;
+    &lt;h2&gt; The best in used airplanes &lt;/h2&gt;
+    &lt;h3&gt; "We’ve got them by the hangarful" &lt;/h3&gt;
+    &lt;h4&gt; We’re the guys to see for a good used airplane &lt;/h4&gt;
+    &lt;h5&gt; We offer great prices on great planes &lt;/h5&gt;
+    &lt;h6&gt; No returns no guarantees no refunds all sales are final &lt;/h6&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+        </code></pre>
+
+        <h4>Blockquotations</h4>
+        <p>The <code>&lt;blockquote&gt;</code> tag sets a block of text off from the normal flow in a document.</p>
+        <h4>Font Styles and Sizes</h4>
+        <p>Boldface - <code>&lt;b&gt;</code>, Italics - <code>&lt;i&gt;</code></p>
+
+        <h4>Superscripts and subscripts</h4>
+        <p>Subscripts with <code>&lt;sub&gt;</code>, Superscripts with <code>&lt;sup&gt;</code></p>
+        <p>Example: <code>x&lt;sub&gt;2&lt;/sub&gt;&lt;sup&gt;3&lt;/sup&gt;</code></p>
+
+        <h4>Character entities</h4>
+        <p>Special characters in HTML:</p>
+        <ul>
+            <li>&amp; &amp;amp; (Ampersand)</li>
+            <li>&lt; &amp;lt; (Less than)</li>
+            <li>&gt; &amp;gt; (Greater than)</li>
+            <li>" &amp;quot; (Double quote)</li>
+            <li>' &amp;apos; (Single quote)</li>
+        </ul>
+
+        <h4>Horizontal rules</h4>
+        <p><code>&lt;hr /&gt;</code> draws a line across the display after a line break.</p>
+
+        <h3>5. Images</h3>
+        <p>Image formats: GIF, JPEG, PNG</p>
+        <h4>The <code>&lt;img /&gt;</code> tag</h4>
+        <p>Example:</p>
+        <pre><code>
+&lt;img src="comets.jpg" alt="Picture of comets" /&gt;
+        </code></pre>
+
+        <h3>6. Hypertext Links</h3>
+        <p>A link is specified with the <code>href</code> attribute of <code>&lt;a&gt;</code> (the anchor tag).</p>
+        <h4>Example of a link:</h4>
+        <pre><code>
+&lt;a href="C210data.html"&gt; Information on the Cessna 210 &lt;/a&gt;
+        </code></pre>
+
+        <h3>7. Lists</h3>
+        <h4>Unordered lists</h4>
+        <p>The list is the content of the <code>&lt;ul&gt;</code> tag.</p>
+        <h4>Ordered lists</h4>
+        <p>The list is the content of the <code>&lt;ol&gt;</code> tag.</p>
+        <h4>Definition lists</h4>
+        <p>The list is the content of the <code>&lt;dl&gt;</code> tag.</p>
+
+        <h3>8. Tables</h3>
+        <p>A table is specified as the content of a <code>&lt;table&gt;</code> tag.</p>
+        <h4>Basic table tags:</h4>
+        <pre><code>
+&lt;table border="border"&gt;
+   &lt;caption&gt; Fruit Juice Drinks &lt;/caption&gt;
+     &lt;tr&gt;
+       &lt;th&gt;&lt;/th&gt;
+       &lt;th&gt; Apple &lt;/th&gt;
+       &lt;th&gt; Orange &lt;/th&gt;
+       &lt;th&gt; Screwdriver &lt;/th&gt;
+     &lt;/tr&gt;
+     &lt;tr&gt;
+       &lt;th&gt; Breakfast &lt;/th&gt;
+       &lt;td&gt; 0 &lt;/td&gt;
+       &lt;td&gt; 1 &lt;/td&gt;
+       &lt;td&gt; 0 &lt;/td&gt;
+     &lt;/tr&gt;
+     &lt;tr&gt;
+       &lt;th&gt; Lunch &lt;/th&gt;
+       &lt;td&gt; 1 &lt;/td&gt;
+      
+
+ &lt;td&gt; 1 &lt;/td&gt;
+       &lt;td&gt; 0 &lt;/td&gt;
+     &lt;/tr&gt;
+     &lt;tr&gt;
+       &lt;th&gt; Dinner &lt;/th&gt;
+       &lt;td&gt; 1 &lt;/td&gt;
+       &lt;td&gt; 1 &lt;/td&gt;
+       &lt;td&gt; 1 &lt;/td&gt;
+     &lt;/tr&gt;
+&lt;/table&gt;
+        </code></pre>
+    </div>
+</body>
+</html>
+
+---
+
+This webpage outlines the key topics and examples from the first module of web programming, covering the basics of HTML and XHTML syntax, document structure, text markup, images, links, lists, and tables.
