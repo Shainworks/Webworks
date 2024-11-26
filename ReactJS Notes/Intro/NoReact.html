@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            color:red;
+            height: 112px;
+            width: 112px;
+            border: 2px solid black;
+            padding :3px;
+        }
+    </style>
+</head>
+<body>
+     <div class="box box1">This is box 1</div>
+     <div class="box box2">This is box 2</div>
+     <div class="box box3">This is box 3</div>
+     <div id="counter">1</div>
+     <button id  = "btn">Click me</button>
+     <script>
+        setTimeout(() => {
+            document.querySelector(".box1").innerHTML = "Hey i am the first one"
+        }, 1000);
+        setTimeout(() => {
+            document.querySelector(".box2").innerHTML = "Hey i am the second one"
+        }, 2000);
+        setTimeout(() => {
+            document.querySelector(".box3").innerHTML = "Hey i am the third one"
+        }, 3000);
+        document.getElementById("btn").addEventListener("click",()=>{
+            let num = parseInt(document.getElementById("counter").innerHTML)        //innerhtml always returns the content as string as it is in the tag.....that is why we use parseint to read the data as integer in the above scenario which is one (1).
+            document.getElementById("counter").innerHTML = num +1 ;
+        })
+     </script>
+</body>
+</html>
