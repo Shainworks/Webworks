@@ -1,0 +1,39 @@
+<h1 style="text-align: center; font-family: Arial, sans-serif; color: #333;">Password Generator</h1>
+<form action="{%url 'generator'%}" style="max-width: 400px; margin: 0 auto; font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <label for="length" style="display: block; margin-bottom: 10px; font-weight: bold;">Select Length:</label>
+    <select name="length" id="length" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc; margin-bottom: 20px;">
+        <option value="6">6 Character</option>
+        <option value="7">7 Character</option>
+        <option value="8">8 Character</option>
+        <option value="9">9 Character</option>
+        <option value="10">10 Character</option>
+        <option value="11">11 Character</option>
+        <option value="12" selected = "selected">12 Character</option>
+        <option value="13">13 Character</option>
+        <option value="14">14 Character</option>
+        <option value="15">15 Character</option>
+        <option value="16">16 Character</option>
+        <option value="17">17 Character</option>
+        <option value="18">18 Character</option>
+        <option value="19">19 Character</option>
+        <option value="20">20 Character</option>
+
+    </select>
+    
+    <label style="display: block; margin: 10px 0;">
+        <input type="checkbox" name="UPPERCASE" style="margin-right: 8px;"> UPPERCASE
+    </label>
+    <label style="display: block; margin: 10px 0;">
+        <input type="checkbox" name="SPECIALCHARACTER" style="margin-right: 8px;"> SPECIAL CHARACTER
+    </label>
+    <label style="display: block; margin: 10px 0;">
+        <input type="checkbox" name="NUMBERS" style="margin-right: 8px;"> NUMBERS
+    </label>
+    
+    <input type="submit" value="Generate Password" style="display: block; width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 16px;">
+</form>
+
+
+<form action="{%url 'About'%}" style="text-align: center; margin-top: 20px;">
+    <button style="padding: 10px 20px; font-size: 16px; background-color: #2196F3; color: white; border: none; border-radius: 5px; cursor: pointer;">About Page</button>
+</form>
