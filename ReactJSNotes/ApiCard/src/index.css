@@ -1,0 +1,10 @@
+.cards{
+  border: 2px solid black;
+  max-width: 34vw;
+}
+.container{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
