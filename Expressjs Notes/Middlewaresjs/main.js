@@ -50,8 +50,9 @@ app.listen(port, () => {
 // Third-party middleware: Many third-party middleware libraries are available for various tasks like logging, security, session handling, etc. Examples include morgan for logging, helmet for security headers, and cookie-parser for handling cookies.
 // const morgan = require('morgan');
 // app.use(morgan('dev'));  // Third-party middleware for logging
-✔️ Logging
-✔️ Authentication
-✔️ Error Handling
-✔️ Parsing Request Data
-✔️ Modifying Requests/Responses
+//Why use the middlewares
+// ✔️ Logging
+// ✔️ Authentication
+// ✔️ Error Handling
+// ✔️ Parsing Request Data
+// ✔️ Modifying Requests/Responses
