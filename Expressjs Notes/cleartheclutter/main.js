@@ -9,7 +9,7 @@ let files = await fs.readdir(basepath)
 //readdir(basepath) reads the file in the path and lists them in a array
 for (const item of files) {
     console.log("running for ", item)
-    let ext = item.split(".")[item.split(".").length - 1]
+    let ext = item.split(".")[item.split(".").length - 1]                //→ Retrieves the last element from the array, which is the file extension.
     if (ext != "js" && ext != "json" && item.split(".").length > 1) {       //i don't want my js and json file to be moved over there
         //what this below if block does is
         //The script checks if a folder with the same name as the file extension (e.g., txt, png, etc.) exists within the basepath.
