@@ -3,6 +3,7 @@ import fsn from "fs"
 import path from "path"
 
 const basepath = "C:\\Users\\msdar\\Desktop\\cleartheclutter"
+//Change this basepath according to your system requirements
 
 let files = await fs.readdir(basepath)
 //readdir(basepath) reads the file in the path and lists them in a array
